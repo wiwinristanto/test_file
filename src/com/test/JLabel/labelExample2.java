@@ -17,17 +17,23 @@ public class labelExample2 {
         frame.pack();
         frame.setVisible(true);
     }
+    JFrame f;
 
     public labelExample2 () {
+        f=new JFrame();
         button1.addActionListener(e -> {
             try {
                 String host = tfDns.getText();
                 String ip = java.net.InetAddress.getByName(host).getHostAddress();
                 tfIP.setText(ip);
 
-            } catch (Exception ex ) {
-//                System.out.println(ex);
-                JOptionPane.showMessageDialog("Alamat yang anda masukan Tidak ditemukan");
+            } catch (UnknownHostException u) {
+                System.out.println("alamat tidak ditemukan");
+//                String dns =tfIP.getText();
+//                tfIP.setText(String.valueOf(u));                //JOptionPane.showMessageDialog("Alamat yang anda masukan Tidak ditemukan");
+            }catch (Exception ex) {
+                System.out.println(ex);
+                JOptionPane.showMessageDialog(f, "Alamat yg anda masukan salah");
             }
         });
     }
