@@ -75,9 +75,6 @@
               <text value="Cari IP"/>
             </properties>
           </component>
-          <vspacer id="990ec">
-            <constraints/>
-          </vspacer>
         </children>
       </grid>
     </children>

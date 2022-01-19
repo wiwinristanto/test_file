@@ -1,6 +1,7 @@
 package com.test.JLabel;
 
 import javax.swing.*;
+import java.net.UnknownHostException;
 
 
 public class labelExample2 {
